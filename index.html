@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Example Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    canvas {
+      border: 2px solid #333;
+      display: block;
+      margin: 1.5em 0;
+    }
+    section {
+      background-color: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Canvas Element Example</h1>
+    <p>This web page uses the HTML5 <code>&lt;canvas&gt;</code> element to draw graphics directly on the page. In the example below, we draw a rectangle, a circle, and some text using the Canvas API.</p>
+  </header>
+
+  <canvas id="myCanvas" width="500" height="300"></canvas>
+
+  <section>
+    <h2>About This Page</h2>
+    <p>The canvas element is powerful for creating graphics, animations, games, and data visualizations. You can draw shapes, images, or text using JavaScript. In this example, we drew a few basic shapes to demonstrate its functionality.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit ut eros fermentum consequat. Vivamus sit amet eros libero. Sed semper, justo sed lobortis tincidunt, enim nisl posuere turpis, ut dapibus sem magna at ex.</p>
+  </section>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+    ctx.fillStyle = "#3498db";
+    ctx.fillRect(50, 50, 150, 100);
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.arc(300, 100, 50, 0, Math.PI * 2);
+    ctx.fillStyle = "#e74c3c";
+    ctx.fill();
+
+    // Draw text
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "#2c3e50";
+    ctx.fillText("Hello Canvas!", 180, 200);
+  </script>
+
+</body>
+</html>
